@@ -36,3 +36,9 @@
   display: block;
   margin-top: 0;
 }
+
+input::placeholder {
+  color: #ffffff !important;
+  opacity: 1; /* optional: make it fully visible */
+}
+
