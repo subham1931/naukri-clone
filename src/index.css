@@ -1,3 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue",
+    "Nanum Gothic", sans-serif;
+}
+
+#btn1:hover {
+  background-color: rgb(238, 238, 238);
+}
+#btn2:hover {
+  background-color: rgba(255, 255, 255, 0.7); /* transparent white */
+  color: orange;
+}
+
 .nav-link-hover {
   position: relative;
 }
@@ -10,7 +25,7 @@
   height: 3px;
   width: 0%;
   background-color: orange;
-  transition: width 0.3s ease;
+  /* transition: width 0.3s ease; */
 }
 
 .nav-link-hover:hover::after {
@@ -19,5 +34,5 @@
 
 .nav-item.dropdown:hover .dropdown-menu {
   display: block;
-  margin-top: 0; /* remove default delay margin */
+  margin-top: 0;
 }

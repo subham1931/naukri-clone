@@ -13,7 +13,7 @@ const Navbar = () => {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex gap-4">
               <li className="nav-item dropdown">
                 <a
-                  className="nav-link nav-link-hover"
+                  className="nav-link nav-link-hover fst-normal"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -29,34 +29,72 @@ const Navbar = () => {
                     top: "60px",
                     left: "-200px",
                     borderRadius: "10px",
+                    
                   }}
                 >
                   <div className="row text-nowrap">
-                    <div className="col border-end pe-4 text-center">
-                      <h6 className="mb-2">Popular Category</h6>
+                    <div className="col border-end pe-4 text-start">
+                      <h6 className="ms-3 ">Popular Category</h6>
                       <a className="dropdown-item" href="#">
-                        Action 1
+                        It jobs
                       </a>
                       <a className="dropdown-item" href="#">
-                        Action 2
+                        Sales jobs 
+                      </a>
+                      <a className="dropdown-item" href="#">
+                        Marketing jobs
+                      </a>
+                       <a className="dropdown-item" href="#">
+                       Data science job
+                      </a>
+                       <a className="dropdown-item" href="#">
+                        HR jobs
+                      </a>
+                       <a className="dropdown-item" href="#">
+                        Engeneraring Jobs
+                      </a>
+                      
+                    </div>
+                    <div className="col border-end pe-4 text-start">
+                      <h6 className="ms-3 fst-normal">Jobs in demand</h6>
+                      <a className="dropdown-item" href="#">
+                        Fresher jobs
+                      </a>
+                      <a className="dropdown-item" href="#">
+                        MNC jobs
+                      </a>
+                      <a className="dropdown-item" href="#">
+                        Remort jobs
+                      </a>
+                      <a className="dropdown-item" href="#">
+                        Work from home
+                      </a>
+                      <a className="dropdown-item" href="#">
+                        walk-in jobs
+                      </a>
+                      <a className="dropdown-item" href="#">
+                        part-time jobs
                       </a>
                     </div>
-                    <div className="col border-end pe-4 text-center">
-                      <h6 className="mb-2">Jobs in demand</h6>
+                    <div className="col text-start">
+                      <h6 className="ms-3 ">Jobs by location</h6>
                       <a className="dropdown-item" href="#">
-                        Another 1
+                        Jobs in Delhi
                       </a>
                       <a className="dropdown-item" href="#">
-                        Another 2
-                      </a>
-                    </div>
-                    <div className="col text-center">
-                      <h6 className="mb-2">Jobs by location</h6>
-                      <a className="dropdown-item" href="#">
-                        More 1
+                        Jobs in Mumbai
                       </a>
                       <a className="dropdown-item" href="#">
-                        More 2
+                        Jobs in Bangalore
+                      </a>
+                      <a className="dropdown-item" href="#">
+                        Jobs in Hydrerabad
+                      </a>
+                      <a className="dropdown-item" href="#">
+                        Jobs in Chennai
+                      </a>
+                      <a className="dropdown-item" href="#">
+                        Jobs in Pune
                       </a>
                     </div>
                   </div>
@@ -64,13 +102,13 @@ const Navbar = () => {
               </li>
               <li className="nav-item dropdown">
                 <a
-                  className="nav-link nav-link-hover"
+                  className="nav-link nav-link-hover fst-normal"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  companies
+                  Companies
                 </a>
 
                 <div
@@ -95,10 +133,10 @@ const Navbar = () => {
                     <div className="col border-end pe-4 text-center">
                       <h6 className="mb-2">Jobs in demand</h6>
                       <a className="dropdown-item" href="#">
-                        Another 1
+                        Another 3
                       </a>
                       <a className="dropdown-item" href="#">
-                        Another 2
+                        Another 4
                       </a>
                     </div>
                     <div className="col text-center">
@@ -115,7 +153,7 @@ const Navbar = () => {
               </li>
               <li className="nav-item dropdown">
                 <a
-                  className="nav-link nav-link-hover"
+                  className="nav-link nav-link-hover fw-normal"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -170,15 +208,16 @@ const Navbar = () => {
         <div className="d-flex gap-3">
           <button
             type="button"
-            className="btn  px-4"
+            className="btn px-4 -bs-btn-color:white fw-normal" id="btn1"
             style={{ borderRadius: "20px", borderColor: "blue", color: "blue" }}
           >
             Login
           </button>
           <button
-            className="btn px-4 text-white"
+            className="btn px-4 text-white fw-semibold" id="btn2"
             style={{
-              backgroundColor: "#ff8000", // deeper orange
+              
+              backgroundColor: "#f05537", 
               borderColor: "#ff8000",
               borderRadius: "20px",
             }}
@@ -190,7 +229,7 @@ const Navbar = () => {
             style={{ border: "none", backgroundColor: "transparent" }}
           >
             <a
-              className="nav-link nav-link-hover"
+              className="nav-link nav-link-hover d-flex"
               href="#"
               role="button"
               data-bs-toggle="dropdown"
@@ -198,6 +237,7 @@ const Navbar = () => {
             >
               For Employers
             </a>
+            <i className="bi bi-chevron-compact-down "></i>
 
             <div
               className="dropdown-menu p-3"
