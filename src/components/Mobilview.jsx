@@ -114,7 +114,7 @@ const Mobilview = () => {
             <span
               className="input-group-text bg-transparent border-0 p-1 ps-2"
               style={{
-                color: "#fff", // 🔸 makes the icon white
+                color: "#fff", 
               }}
             >
               <i className="bi bi-search"></i>
@@ -126,8 +126,8 @@ const Mobilview = () => {
               style={{
                 fontSize: "0.9rem",
                 backgroundColor: "transparent",
-                color: "#fff", // 🔸 input text color
-                placeholderTextColor: "#fff", // doesn't work in plain CSS; see below
+                color: "#fff", 
+                placeholderTextColor: "#fff", 
               }}
             />
           </div>
@@ -153,7 +153,7 @@ const Mobilview = () => {
           className="position-relative"
           style={{
             width: "100%",
-            height: "85vh", // or any specific height
+            height: "85vh", 
           }}
         >
           {/* Background image */}
@@ -165,14 +165,14 @@ const Mobilview = () => {
               src="https://static.naukimg.com/s/9/135/_next/static/i/hp-illust-ot-1.png"
               alt="Background"
               style={{
-                width: "72%", // decrease image size as needed
+                width: "72%", 
                 height: "55%",
                 opacity: 0.8,
               }}
             />
           </div>
 
-          {/* Button container (foreground content) */}
+        
           <div
             className="position-relative w-100 h-100 d-flex justify-content-center align-items-center"
             style={{ zIndex: 2 }}

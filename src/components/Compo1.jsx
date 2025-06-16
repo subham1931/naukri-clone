@@ -57,13 +57,13 @@ const Compo1 = () => {
               </button>
             </div>
             <div>
+            </div>
+          </div>
               <img
-                style={{ width: "300px" }}
+                style={{ width: "810px", marginLeft:"220px", marginTop:"20px" }}
                 alt="awareness"
                 src="https://static.naukimg.com/s/0/0/i/resume-writing-promotion/desktop/homepage/help_v1.png"
               />
-            </div>
-          </div>
         </div>
       </div>
     </>
