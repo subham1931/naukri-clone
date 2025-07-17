@@ -1,5 +1,5 @@
 .mobile-view {
-  display: block; /* show by default */
+  display: block; 
 }
 
 @media (min-width: 321px) {

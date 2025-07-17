@@ -29,6 +29,7 @@ const Mobilview = () => {
   const toggleJobs = () => {
     setIsJobsOpen(!isJobsOpen);
   };
+
   useEffect(() => {
     if (isSidebarOpen) {
       document.body.style.overflow = "hidden";
@@ -60,7 +61,7 @@ const Mobilview = () => {
         />
       )}
 
-      {/* {React.useEffect(() => {
+      {React.useEffect(() => {
         if (isSidebarOpen) {
           document.body.style.overflow = "hidden";
         } else {
@@ -69,7 +70,7 @@ const Mobilview = () => {
         return () => {
           document.body.style.overflow = "";
         };
-      }, [isSidebarOpen])} */}
+      }, [isSidebarOpen])}
 
       <div
         className="position-fixed top-0 start-0 h-100 bg-white text-black"
@@ -152,7 +153,7 @@ const Mobilview = () => {
               />
             </button>
 
-            {/* Dropdown submenu */}
+           
             {isJobsOpen && (
               <ul className="list-unstyled ps-4 mt-2">
                 <li className="mb-2">
@@ -312,7 +313,7 @@ const Mobilview = () => {
             <span
               className="input-group-text bg-transparent border-0 p-1 ps-2"
               style={{
-                color: "#fff", // 🔸 makes the icon white
+                color: "#fff", 
               }}
             >
               <i className="bi bi-search"></i>
@@ -324,8 +325,8 @@ const Mobilview = () => {
               style={{
                 fontSize: "0.9rem",
                 backgroundColor: "transparent",
-                color: "#fff", // 🔸 input text color
-                placeholderTextColor: "#fff", // doesn't work in plain CSS; see below
+                color: "#fff", 
+                placeholderTextColor: "#fff", 
               }}
             />
           </div>
@@ -351,7 +352,7 @@ const Mobilview = () => {
           className="position-relative"
           style={{
             width: "100%",
-            height: "85vh", // or any specific height
+            height: "85vh", 
           }}
         >
           {/* Background image */}
@@ -363,14 +364,14 @@ const Mobilview = () => {
               src="https://static.naukimg.com/s/9/135/_next/static/i/hp-illust-ot-1.png"
               alt="Background"
               style={{
-                width: "72%", // decrease image size as needed
+                width: "72%", 
                 height: "55%",
                 opacity: 0.8,
               }}
             />
           </div>
 
-          {/* Button container (foreground content) */}
+          {/* Button container  */}
           <div
             className="position-relative w-100 h-100 d-flex justify-content-center align-items-center"
             style={{ zIndex: 2 }}
@@ -395,7 +396,7 @@ const Mobilview = () => {
         </div>
       </div>
 
-      {/* Bottom illustration */}
+      {/* Bottom data */}
       <div className="d-flex flex-column align-items-center text-center p-3">
         <img
           src="https://static.naukimg.com/s/0/0/i/resume-writing-promotion/desktop/homepage/help_v1.png"
