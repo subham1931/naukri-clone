@@ -9,18 +9,18 @@ const categories = [
     title: "FMCG & Retail",
     count: "165",
     logos: ["gokul", "cantabil", "jcpenney"],
-  }
-  ,{
+  },
+  {
     title: "FMCG & Retail",
     count: "165",
     logos: ["gokul", "cantabil", "jcpenney"],
-  }
-  ,{
+  },
+  {
     title: "FMCG & Retail",
     count: "165",
     logos: ["gokul", "cantabil", "jcpenney"],
-  }
-  ,{
+  },
+  {
     title: "FMCG & Retail",
     count: "165",
     logos: ["gokul", "cantabil", "jcpenney"],
@@ -109,87 +109,189 @@ const HiringSection = () => {
   );
 
   return (
-    <div className={styles.wrapper}>
-      <Container style={{ backgroundColor: "", width:"78%" }}>
-        <h2 className={styles["section-title"]}>Top companies hiring now</h2>
+    <div className={styles.wrapper} style={{}}>
+      <Container style={{ width: "84%" }}>
+        <div
+          style={{
+            // backgroundColor: "green",
+            position: "relative",
+            padding: "2rem",
+          }}
+        >
+          <h2 className={styles["section-title"]}>Top companies hiring now</h2>
 
-        <Row className="mb-3">
-          {visibleCategories.map((cat, idx) => (
-            <Col key={idx} md={4} sm={6} xs={12} className="mb-4">
-              <Card className={styles["category-card"]}>
-                <Card.Body>
-                  <Card.Title>{cat.title}</Card.Title>
-                  <p>{cat.count} are actively hiring</p>
-                  <div className={styles["logo-row"]}>
-                    {cat.logos.map((logo, i) => (
-                      <img
-                        key={i}
-                        src={`https://via.placeholder.com/30?text=${logo}`}
-                        alt={logo}
-                      />
-                    ))}
-                  </div>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-        <div className="d-flex justify-content-between mb-5">
-          <Button
-            disabled={catPage === 0}
-            onClick={() => setCatPage(catPage - 1)}
+          {/* Navigation Buttons */}
+          <div
+            className="d-flex justify-content-between"
+            style={{
+              position: "absolute",
+              top: "180px",
+              left: "10px",
+              right: "10px",
+              zIndex: 10,
+            }}
           >
-            Previous
-          </Button>
-          <Button
-            disabled={catPage === totalCatPages - 1}
-            onClick={() => setCatPage(catPage + 1)}
-          >
-            Next
-          </Button>
+            {catPage > 0 ? (
+              <Button
+                onClick={() => setCatPage(catPage - 1)}
+                className="d-flex align-items-center justify-content-center rounded-circle"
+                variant="light"
+                style={{
+                  width: "40px",
+                  height: "40px",
+                  padding: "0",
+                  color: "",
+                  border: "1px solid gray",
+                }}
+              >
+                <i className="bi bi-arrow-left"></i>
+              </Button>
+            ) : (
+              <div style={{ width: "40px" }}></div> // placeholder to keep spacing
+            )}
+
+            {catPage < totalCatPages - 1 ? (
+              <Button
+                onClick={() => setCatPage(catPage + 1)}
+                className="d-flex align-items-center justify-content-center rounded-circle"
+                variant="light"
+                style={{
+                  width: "40px",
+                  height: "40px",
+                  padding: "0",
+                  // backgroundColor:'white'
+                  border: "1px solid gray",
+                }}
+              >
+                <i className="bi bi-arrow-right"></i>
+              </Button>
+            ) : (
+              <div style={{ width: "40px" }}></div> // placeholder to keep spacing
+            )}
+          </div>
+
+          {/* Card Grid */}
+          <Row className="mb-3 mt-5">
+            {visibleCategories.map((cat, idx) => (
+              <Col key={idx} md={4} sm={6} xs={12} className="mb-4">
+                <Card className={styles["category-card"]}>
+                  <Card.Body>
+                    <Card.Title>{cat.title}</Card.Title>
+                    <p>{cat.count} are actively hiring</p>
+                    <div className={styles["logo-row"]}>
+                      {cat.logos.map((logo, i) => (
+                        <img
+                          key={i}
+                          src={`https://via.placeholder.com/30?text=${logo}`}
+                          alt={logo}
+                        />
+                      ))}
+                    </div>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
         </div>
 
-        <h2 className={styles["section-title"]}>
-          Featured companies actively hiring
-        </h2>
+        <div
+          style={{
+            // backgroundColor: "green",
+            position: "relative",
+            padding: "2rem",
+          }}
+        >
+          <h2 className={styles["section-title"]}>
+            Featured companies actively hiring
+          </h2>
 
-        <Row>
-          {visibleFeatured.map((comp, idx) => (
-            <Col key={idx} md={3} sm={6} xs={12} className="mb-4">
-              <Card className={styles["company-card"]}>
-                <Card.Body>
-                  <div className="mb-2">
-                    <img
-                      src={comp.logo}
-                      alt={comp.name}
-                      className="mb-3"
-                      style={{ height: "50px", objectFit: "contain" }}
-                    />
-                  </div>
-                  <Card.Title>{comp.name}</Card.Title>
-                  <p className={styles.rating}>
-                    ⭐ {comp.rating} &nbsp; | &nbsp; {comp.reviews} reviews
-                  </p>
-                  <p>{comp.desc}</p>
-                  <Button className={styles["job-button"]}>View jobs</Button>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-        <div className="d-flex justify-content-between mt-3">
-          <Button
-            disabled={featPage === 0}
-            onClick={() => setFeatPage(featPage - 1)}
+          {/* Navigation Buttons */}
+          <div
+            className="d-flex justify-content-between"
+            style={{
+              position: "absolute",
+              top: "250px",
+              left: "10px",
+              right: "10px",
+              zIndex: 10,
+            }}
           >
-            Previous
-          </Button>
-          <Button
-            disabled={featPage === totalFeatPages - 1}
-            onClick={() => setFeatPage(featPage + 1)}
-          >
-            Next
-          </Button>
+            {featPage > 0 ? (
+              <Button
+                onClick={() => {
+                  setFeatPage(featPage - 1);
+                  document
+                    .getElementById("featured-companies")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="d-flex align-items-center justify-content-center rounded-circle"
+                variant="light"
+                style={{
+                  width: "40px",
+                  height: "40px",
+                  padding: "0",
+                  backgroundColor: "white",
+                  color: "black",
+                  border: "1px solid gray",
+                }}
+              >
+                <i className="bi bi-arrow-left"></i>
+              </Button>
+            ) : (
+              <div style={{ width: "40px" }}></div>
+            )}
+
+            {featPage < totalFeatPages - 1 ? (
+              <Button
+                onClick={() => {
+                  setFeatPage(featPage + 1);
+                  document
+                    .getElementById("featured-companies")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="d-flex align-items-center justify-content-center rounded-circle"
+                variant="light"
+                style={{
+                  width: "40px",
+                  height: "40px",
+                  padding: "0",
+                  backgroundColor: "white",
+                  color: "black",
+                  border: "1px solid gray",
+                }}
+              >
+                <i className="bi bi-arrow-right"></i>
+              </Button>
+            ) : (
+              <div style={{ width: "40px" }}></div>
+            )}
+          </div>
+
+          {/* Card Grid */}
+          <Row id="featured-companies">
+            {visibleFeatured.map((comp, idx) => (
+              <Col key={idx} md={3} sm={6} xs={12} className="mb-4">
+                <Card className={styles["company-card"]}>
+                  <Card.Body>
+                    <div className="mb-2">
+                      <img
+                        src={comp.logo}
+                        alt={comp.name}
+                        className="mb-3"
+                        style={{ height: "50px", objectFit: "contain" }}
+                      />
+                    </div>
+                    <Card.Title>{comp.name}</Card.Title>
+                    <p className={styles.rating}>
+                      ⭐ {comp.rating} &nbsp; | &nbsp; {comp.reviews} reviews
+                    </p>
+                    <p>{comp.desc}</p>
+                    <Button className={styles["job-button"]}>View jobs</Button>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
         </div>
       </Container>
     </div>

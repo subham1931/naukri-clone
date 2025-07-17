@@ -3,16 +3,17 @@ import React from "react";
 const Compo1 = () => {
   return (
     <>
-      <div className="App " style={{ padding: "20px",backgroundColor:'white' }}>
+      <div className="App " style={{ padding: "20px" }}>
         {/*  Search Bar */}
         <div className="container mb-5">
-          <div className="d-flex justify-content-center">
+          <div className="d-flex justify-content-center ">
             <div
-              className="input-group shadow"
+              className="input-group shadow align-items-center"
               style={{
-                maxWidth: "1100px",
+                maxWidth: "900px",
                 borderRadius: "90px",
-                height: "80px",
+                height: "70px",
+                // backgroundColor:'green'
               }}
             >
               <span
@@ -20,7 +21,7 @@ const Compo1 = () => {
                 style={{ borderRadius: "40px 0 0 40px" }}
               >
                 <i
-                  className="bi bi-search "
+                  className="bi bi-search"
                   style={{ fontSize: "1.5rem", paddingLeft: "15px" }}
                 ></i>
               </span>
@@ -28,11 +29,21 @@ const Compo1 = () => {
                 type="text"
                 className="form-control border-0"
                 placeholder="Enter skills / designations / companies"
-                style={{ borderRadius: "0", width: "12%", fontSize: "20px" }}
+                style={{
+                  fontSize: "17px",
+                  width: "20%",
+                  boxShadow: "none",
+                  borderColor: "transparent",
+                  
+                }}
               />
               <select
                 className="form-select border-0 text-body-tertiary"
-                style={{ borderRadius: "0", fontSize: "20px" }}
+                style={{ fontSize: "17px",
+                  width: "12%",
+                  boxShadow: "none",
+                  borderColor: "transparent",
+                }}
               >
                 <option className="text-primary">Select experience</option>
                 <option className="text-black bg-white">Fresher</option>
@@ -43,31 +54,38 @@ const Compo1 = () => {
               </select>
               <input
                 type="text"
-                className="form-control border-0 "
+                className="form-control border-0"
                 placeholder="Enter location"
-                style={{ borderRadius: "0", fontSize: "20px", color: "black" }}
+                style={{ fontSize: "17px",  }}
               />
               <button
                 className="btn btn-primary rounded-pill"
-                style={{ height: "40px", width: "150px", margin: "20px 20px" }}
+                style={{
+                  height: "40px",
+                  width: "150px",
+                  margin: "0 20px",
+                }}
               >
                 Search
               </button>
             </div>
+
             <div></div>
           </div>
-          <img
-            style={{ width: "902px", marginLeft: "200px", marginTop: "60px" }}
-            alt="awareness"
-            src="https://static.naukimg.com/s/0/0/i/resume-writing-promotion/desktop/homepage/help_v1.png"
-          />
+          <div>
+            <img
+              style={{ width: "902px", marginLeft: "200px", marginTop: "60px" }}
+              alt="awareness"
+              src="https://static.naukimg.com/s/0/0/i/resume-writing-promotion/desktop/homepage/help_v1.png"
+            />
+          </div>
         </div>
       </div>
       <style>
         {`
           input::placeholder {
             color: #888 !important;
-            font-size:20px
+            // font-size:20px
           }
           .form-control:focus, .form-select:focus {
             box-shadow: none;

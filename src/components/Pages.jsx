@@ -9,7 +9,7 @@ const Pages = () => {
       style={{
         fontFamily:
           '-apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Nanum Gothic", sans-serif',
-        backgroundColor: "white",
+        // backgroundColor: "blue",
       }}
     >
       <div class="text-center " style={{paddingTop:'80px'}}>
